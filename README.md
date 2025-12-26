@@ -1,21 +1,26 @@
 ## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+Conversational IVR for College ERP 
+
+## Description
+The integration of a conversational IVR system into the college ERP platform aims to simplify and automate student academic enquiries by using voice-based interaction. The system allows students to speak naturally in English, Tamil, or Tanglish and receive instant academic information, improving accessibility, reducing manual workload, and enhancing overall user experience.
 
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+The Conversational IVR Enabled College ERP Assistant is designed to provide a hands-free, AI-driven solution for students to access their academic records through natural voice commands. Traditional ERP portals require manual login, navigation, and repeated steps, which can be time-consuming. This project eliminates these barriers by implementing an intelligent IVR assistant capable of understanding spoken queries, retrieving ERP data, and responding with synthesized speech. Leveraging Whisper for speech recognition, Gemini for natural language understanding, ChromaDB for retrieval-augmented generation, and MySQL for ERP data handling, the system ensures accurate, real-time responses. Students can simply speak their register number and ask questions about attendance, marks, subjects, fees, exams, and general college information.
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+```
+Uses advanced speech recognition (Whisper ASR) for accurate transcription.
+Integrates Google Gemini for natural language understanding and RAG-based responses.
+Fully multilingual support: English, Tamil, and Tanglish.
+Real-time ERP data retrieval using MySQL database.
+Hands-free interaction with continuous conversation loop.
+Automatic audio normalization, noise handling, and fallback mechanisms.
+High scalability and flexible modular design for deployment.
+Uses JSON-based structured data handling for profile and response organization.
+```
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
+```
 * Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
 * Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
 * Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
@@ -23,37 +28,60 @@ Tailored Chatbot for Hostel Booking System is a project designed to integrate a 
 * Version Control: Implementation of Git for collaborative development and effective code management.
 * IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
 * Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+```
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
-
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
-
+```
+Operating System:
+Works on 64-bit Windows 10/11 or Ubuntu-based Linux environments.
+Development Environment:
+Python 3.10 or later is required for running the IVR assistant.
+Libraries & Frameworks:
+Whisper / Faster-Whisper for speech recognition
+Google Generative AI (Gemini) API
+ChromaDB vector store
+MySQL Connector for database operations
+gTTS and pyttsx3 for speech synthesis
+NumPy, SoundDevice, SoundFile for audio processing
+OpenAI tokenizer, regex, and other utilities
+Database Requirements:
+MySQL 8.0 with ERP schema containing:
+STUDENT, DEPARTMENT, SUBJECT, ENROLLMENT, FEES, MARKS, ATTENDANCE tables.
+IDE:
+VSCode or PyCharm for Python development, debugging, and code management.
+Version Control:
+Git recommended for managing source versions and collaborative updates.
+```
 
 ## Output
+```
+Output 1 – Register Number Recognition
+Shows how the system records audio, transcribes the register number, parses digits like “double two three,” validates it, and authenticates the student.
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+Output 2 – Voice Query and ERP Response
+Displays how the system recognizes questions like “What is my attendance?” and retrieves the exact percentage from the database before responding through speech.
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
+Output 3 – RAG-based General Query Answering
+Demonstrates answering questions like “Library timing enna?” using ChromaDB + Gemini.
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
-
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
-
+Overall Detection/Response Accuracy: Approx. 95%, depending on microphone quality and noise levels.
+```
 
 ## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+The Conversational IVR ERP Assistant significantly enhances the accessibility of student information by enabling natural, effortless voice interaction. It reduces workload on academic and office staff by automating frequently asked queries. The system ensures faster and more personalized access to attendance, marks, fees, and other records. Its multilingual capability makes it accessible for a wide range of students, especially those more comfortable speaking Tamil or Tanglish. This project demonstrates the potential of combining speech recognition, NLP, and database-driven information systems to modernize campus communication and provide a foundation for future AI-powered student services.
 
 ## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+```
+You may use these sample references relevant to your topic:
+Radford, A. et al. “Whisper: Robust Speech Recognition via Weak Supervision.” OpenAI, 2022.
+Google DeepMind. “Gemini Model Documentation.” Google AI, 2024.
+Reimers, N., & Gurevych, I. “Sentence Embeddings using Siamese Networks.” EMNLP, 2019.
+ChromaDB Docs, “Vector Search for AI Applications,” 2023.
+Python Software Foundation, “Speech Libraries Documentation.”
+```
 
+## Author:
 
-
+Hezron Belix
 
